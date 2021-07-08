@@ -1,0 +1,52 @@
+﻿@using DoAnWeb.Models
+@model List<Giohang>
+@{
+    ViewBag.Title = "GIỎ HÀNG";
+    Layout = "~/Views/Shared/_LayoutGioHang.cshtml";
+}
+<h2 style="text-align:center">THÔNG TIN GIỎ HÀNG</h2>
+<table align="center" border="1">
+    <tr style="text-align:center; font-weight: bold">
+        <td> MÃ SẢN PHẨM</td>
+        <td> TÊN SẢN PHẨM</td>
+        <td> HÌNH ẢNH</td>
+        <td> SỐ LƯỢNG</td>
+        <td> ĐƠN GIÁ</td>
+        <td> THÀNH TIỀN</td>
+        <td width="70"> </td>
+        <td width="70"></td>
+        <td width="70"></td>
+    </tr>
+    @foreach (var Banh in Model)
+    {
+     <tr style="text-align:center; font-weight: bold">
+            <td>@Banh.iMasp</td>
+            <td>@Banh.sTensanpham</td>
+            <td><img src="~/images/@Banh.sAnh" /></td>
+
+            @using (Html.BeginForm("Capnhat", "Giohang", new { id = Banh.iMasp }))
+            {
+            <td><input type="number" min="1" value="@Banh.iSoluong" name="txtSoluong" size="5" /></td>
+
+            <td>@String.Format("{0:0,0}", Banh.dGia)</td>
+            <td>@String.Format("{0:0,0}", Banh.dThanhtien)</td>
+            <td><a href="@Url.Action("Details", "BanhKeo", new { id = Banh.iMasp })">XEM CHI TIẾT </td>
+            <td><a href="@Url.Action("Xoasanpham", "Giohang", new { id = Banh.iMasp })">XÓA</td>
+            <td> <input type="submit" value="CẬp NHẬT" /></td>
+            }
+    </tr>
+
+    }
+    <tr style="text-align:right; font-weight: bold ; color:black">
+        <td colspan="5">SỐ LƯỢNG SẢN PHẨM: @ViewBag.Tongsoluong </td>
+        <td colspan="4">SỐ TIỀN CẦN THANH TOÁN:@String.Format("{0:0,0}", ViewBag.Tongtien) VND </td>
+    </tr>
+    <tr style="text-align:right; font-weight: bold ; color:black">
+        <td colspan="9"><a href="@Url.Action("Xoatatcagiohang", "BanhKeo")">XÓA TOÀN BỘ GIỎ HÀNG</td>
+    </tr>
+    <tr style="text-align:right; font-weight: bold ; color:black">
+        <td colspan="9"><a href="@Url.Action("Dathang", "Giohang")">ĐẶT HÀNG</td>
+    </tr>
+</table>
+
+

@@ -1,0 +1,537 @@
+﻿
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <!-- Mobile Metas -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Site Metas -->
+    <title>Live Dinner Restaurant - Responsive HTML5 Template</title>
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- Site Icons -->
+    <link rel="shortcut icon" href="~/images/favicon.ico" type="~/image/x-icon">
+    <link rel="apple-touch-icon" href="~/images/apple-touch-icon.png">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="~/Content/bootstrap.min.css">
+    <!-- Site CSS -->
+    <link rel="stylesheet" href="~/Content/style.css">
+    <!-- Responsive CSS -->
+    <link rel="stylesheet" href="~/Content/responsive.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="~/Content/custom.css">
+
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+    <div>
+        @RenderBody()
+    </div>
+    <!-- Start header -->
+    <header class="top-navbar">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container">
+                <a class="navbar-brand" href="Index">
+                    <img src="~/images/logo.jpg" alt="" />
+                </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbars-rs-food" aria-controls="navbars-rs-food" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbars-rs-food">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item active"><a class="nav-link" href="Index">TRANG CHỦ</a></li>
+                        <li class="nav-item"><a class="nav-link" href="about.html">Giới Thiệu</a></li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="dropdown-a" data-toggle="dropdown">THAM GIA</a>
+                            <div class="dropdown-menu" aria-labelledby="dropdown-a">
+                                <a class="dropdown-item" href="reservation.html">Reservation</a>
+                                <a class="dropdown-item" href="DangNhap">ĐĂNG NHẬP</a>
+                                <a class="dropdown-item" href="DangKy">Đăng Ký</a>
+                            </div>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="dropdown-a" data-toggle="dropdown">Blog</a>
+                            <div class="dropdown-menu" aria-labelledby="dropdown-a">
+                                <a class="dropdown-item" href="blog.html">blog</a>
+                                <a class="dropdown-item" href="blog-details.html">blog Single</a>
+                            </div>
+                        </li>
+                        <li class="nav-item"><a class="nav-link" href="LienLac">LIÊN LẠC</a></li>
+                        <li> @Html.Action("Giohangpartial", "Giohang")</li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <!-- End header -->
+    <!-- Start slides -->
+    <div id="slides" class="cover-slides">
+        <ul class="slides-container">
+            <li class="text-left">
+                <img src="~/images/slider-01.jpg" alt="">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <h1 class="m-b-20"><strong> Xin Chào !<br> Cửa Hàng LuonLuonVuiTuoi</strong></h1>
+                            <p class="m-b-40">CẢM ƠN BẠN ĐÃ LỰA CHỌN CHÚNG TÔI.</p>
+                            <p><a class="btn btn-lg btn-circle btn-outline-new-white" href="#">Reservation</a></p>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li class="text-left">
+                <img src="~/images/slider-02.jpg" alt="">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <h1 class="m-b-20"><strong>Xin Chào !<br> Cửa Hàng LuonLuonVuiTuoi</strong></h1>
+                            <p class="m-b-40">CẢM ƠN BẠN ĐÃ LỰA CHỌN CHÚNG TÔI.</p>
+                            <p><a class="btn btn-lg btn-circle btn-outline-new-white" href="#">Reservation</a></p>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li class="text-left">
+                <img src="~/images/slider-03.jpg" alt="">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <h1 class="m-b-20"><strong>Xin Chào !<br> Cửa Hàng LuonLuonVuiTuoi</strong></h1>
+                            <p class="m-b-40">CẢM ƠN BẠN ĐÃ LỰA CHỌN CHÚNG TÔI.</p>
+                            <p><a class="btn btn-lg btn-circle btn-outline-new-white" href="#">Reservation</a></p>
+                        </div>
+                    </div>
+                </div>
+            </li>
+        </ul>
+        <div class="slides-navigation">
+            <a href="#" class="next"><i class="fa fa-angle-right" aria-hidden="true"></i></a>
+            <a href="#" class="prev"><i class="fa fa-angle-left" aria-hidden="true"></i></a>
+        </div>
+    </div>
+    <!-- End slides -->
+    <!-- Start About -->
+    <div class="about-section-box">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 col-md-6 col-sm-12 text-center">
+                    <div class="inner-column">
+                        <h1>XIN CHÀO <span> LuonluonVuiTuoi</span></h1>
+                        <h4>VỀ CHÚNG TÔI</h4>
+                        <p>VỚI 25 KINH NGHIỆM TRONG NGÀNG NGHỀ BÁNH KẸO CHÚNG TÔI TỰ TIN VỀ TẤT CẢ SẢN PHẨM CỦA MÌNH ĐẢM BẢO CHẤT LƯỢNG DẾN TAY KHÁCH HÀNG </p>
+                        <p>VỚI NGUỒN HÀNG PHONG PHÚ VÀ ĐA DẠNG CHÚNG TÔI CÓ THỂ ĐÁP ỨNG MỌI NH CẦU VỚI KHÁCH HÀNG DÙ LÀ KHÁCH HÀNG KHO TÍN NHẤT.</p>
+                        <a class="btn btn-lg btn-circle btn-outline-new-white" href="#">Reservation</a>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-12">
+                    <img src="~/images/about.jpg" alt="" class="img-fluid">
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End About -->
+    <!-- Start QT -->
+    <div class="qt-box qt-background">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 ml-auto mr-auto text-center">
+                    <p class="lead ">
+                        " Thành Công của người thợ làm bánh xuất phát từ đôi bàn tay vàng cùng với khối óc sáng tạo và trái tim đầy nhiệt huyết "
+                    </p>
+                    <span class="lead">--LuonLuonVuiTuoi--</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End QT -->
+    <!-- Start Menu -->
+    <div class="menu-box">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="heading-title text-center">
+                        <h2>CÁC SẢN PHẨM ĐẶT BIỆT</h2>
+                        <p>VÔ CÙNG THƠM NGON VÀ CỰC KÌ TỐT CHO SỨC KHỎE</p>
+                    </div>
+                </div>
+            </div>
+            <!---->
+            <div class="row inner-menu-box">
+                <div class="col-3">
+                    <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+                     @Html.Action("LoaiBanhkeo")           
+                   
+                    </div>
+                </div>
+
+                <div class="col-9">
+                    <div class="tab-content" id="v-pills-tabContent">
+                        <div class="tab-pane fade show active" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab">
+                            <div class="row">
+                                @foreach (var Banh in Model)
+                                {
+                                    <div class="col-sm-4 col-lg-4-md-4">
+                                        <div class="thumbnail">
+                                            <a href="@Url.Action("Details", "BanhKeo", new { id = @Banh.Masp })">
+                                                <img alt="@Banh.tensanpham" src="~/images/@Banh.Anh" width="200" , height="200" />
+                                                <div>
+                                                    <br />
+                                                    <h4 style="text-align:center">
+                                                        @Banh.tensanpham
+                                                    </h4>
+                                                    <p></p>
+                                                </div>
+                                                <div class="rating">
+                                                    <p class="pull-right">
+                                                        <script>
+                                                            var a = Math.floor(Math.random() * 100);
+                                                            document.write(a);
+                                                        </script> reviews
+                                                    </p>
+
+
+                                                </div>
+
+                                            </a>
+
+                                        </div>
+                                    </div>
+
+                                }
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="tab-pane fade" id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-profile-tab">
+                            <div class="row">
+                                <div class="col-lg-4 col-md-6 special-grid drinks">
+                                    <div class="gallery-single fix">
+                                        <img src="~/images/special cake-01.jpg" class="img-fluid" alt="Image">
+                                        <div class="why-text">
+                                            <h4>Special Cake 1</h4>
+                                            <p>Bánh xốp phủ socola.</p>
+                                            <h5> 100.000VND</h5>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-4 col-md-6 special-grid drinks">
+                                    <div class="gallery-single fix">
+                                        <img src="~/images/special cake -02.jpg" class="img-fluid" alt="Image">
+                                        <div class="why-text">
+                                            <h4>Special Cake 2</h4>
+                                            <p>bánh xốp nhân matcha.</p>
+                                            <h5> 120.000VND</h5>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-4 col-md-6 special-grid drinks">
+                                    <div class="gallery-single fix">
+                                        <img src="~/images/special cake - 03.jpg" class="img-fluid" alt="Image">
+                                        <div class="why-text">
+                                            <h4>Special Cake 3</h4>
+                                            <p>Bánh rán.</p>
+                                            <h5> 90.000VND</h5>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="tab-pane fade" id="v-pills-messages" role="tabpanel" aria-labelledby="v-pills-messages-tab">
+                            <div class="row">
+                                <div class="col-lg-4 col-md-6 special-grid lunch">
+                                    <div class="gallery-single fix">
+                                        <img src="~/images/BanhTruyenThong-01.jpg" class="img-fluid" alt="Image">
+                                        <div class="why-text">
+                                            <h4>Traditional Cake 1</h4>
+                                            <p>Bánh đậu xanh.</p>
+                                            <h5> 86.000VND/hộp</h5>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-4 col-md-6 special-grid lunch">
+                                    <div class="gallery-single fix">
+                                        <img src="~/images/BanhTruyenThong-02.jpg" class="img-fluid" alt="Image">
+                                        <div class="why-text">
+                                            <h4>Traditional Cake 2</h4>
+                                            <p>Bánh pía.</p>
+                                            <h5> 70.000VND/hộp</h5>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-4 col-md-6 special-grid lunch">
+                                    <div class="gallery-single fix">
+                                        <img src="~/images/BanhTruyenThong-03.jpg" class="img-fluid" alt="Image">
+                                        <div class="why-text">
+                                            <h4>Traditional Cake 3</h4>
+                                            <p>Bánh da lợn.</p>
+                                            <h5> 30.000VND/góc tư</h5>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="v-pills-settings" role="tabpanel" aria-labelledby="v-pills-settings-tab">
+                            <div class="row">
+                                <div class="col-lg-4 col-md-6 special-grid dinner">
+                                    <div class="gallery-single fix">
+                                        <img src="~/images/keo-01.jpg" class="img-fluid" alt="Image">
+                                        <div class="why-text">
+                                            <h4>Candy 1</h4>
+                                            <p>Kẹo dẻo.</p>
+                                            <h5> 40.000VND/bịch</h5>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-4 col-md-6 special-grid dinner">
+                                    <div class="gallery-single fix">
+                                        <img src="~/images/keo-02.jpg" class="img-fluid" alt="Image">
+                                        <div class="why-text">
+                                            <h4>Candy 2</h4>
+                                            <p>Kẹo M&M.</p>
+                                            <h5>  60.000VND/100g</h5>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-4 col-md-6 special-grid dinner">
+                                    <div class="gallery-single fix">
+                                        <img src="~/images/keo-03.jpg" class="img-fluid" alt="Image">
+                                        <div class="why-text">
+                                            <h4>Candy 3</h4>
+                                            <p>Kẹo Mút.</p>
+                                            <h5> 73.000VND/bịch</h5>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+
+        </div>
+    </div>
+    <!-- End Menu -->
+    <!-- Start Gallery -->
+    <div class="gallery-box">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="heading-title text-center">
+                        <h2>BÁN CHẠY</h2>
+                        <p></p>
+                    </div>
+                </div>
+            </div>
+            <div class="tz-gallery">
+                <div class="row">
+                    <div class="col-sm-12 col-md-4 col-lg-4">
+                        <a class="lightbox" href="~/images/special cake -02.jpg">
+                            <img class="img-fluid" src="~/images/special cake -02.jpg" alt="Gallery ~/images">
+                        </a>
+                    </div>
+                    <div class="col-sm-6 col-md-4 col-lg-4">
+                        <a class="lightbox" href="~/images/special cake - 03.jpg">
+                            <img class="img-fluid" src="~/images/special cake - 03.jpg" alt="Gallery ~/images">
+                        </a>
+                    </div>
+                    <div class="col-sm-6 col-md-4 col-lg-4">
+                        <a class="lightbox" href="~/images/BanhTruyenThong-01.jpg">
+                            <img class="img-fluid" src="~/images/BanhTruyenThong-01.jpg" alt="Gallery ~/images">
+                        </a>
+                    </div>
+                    <div class="col-sm-12 col-md-4 col-lg-4">
+                        <a class="lightbox" href="~/images/BanhTruyenThong-02.jpg">
+                            <img class="img-fluid" src="~/images/BanhTruyenThong-02.jpg" alt="Gallery ~/images">
+                        </a>
+                    </div>
+                    <div class="col-sm-6 col-md-4 col-lg-4">
+                        <a class="lightbox" href="~/images/keo-02.jpg">
+                            <img class="img-fluid" src="~/images/keo-02.jpg" alt="Gallery ~/images">
+                        </a>
+                    </div>
+                    <div class="col-sm-6 col-md-4 col-lg-4">
+                        <a class="lightbox" href="~/images/keo-03.jpg">
+                            <img class="img-fluid" src="~/images/keo-03.jpg" alt="Gallery ~/images">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Gallery -->
+    <!-- Start Customer Reviews -->
+    <div class="customer-reviews-box">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="heading-title text-center">
+                        <h2>THÀNH VIÊN</h2>
+                        <p></p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-8 mr-auto ml-auto text-center">
+                    <div id="reviews" class="carousel slide" data-ride="carousel">
+                        <div class="carousel-inner mt-4">
+                            <div class="carousel-item text-center active">
+                                <div class="img-box p-1 border rounded-circle m-auto">
+                                    <img class="d-block w-100 rounded-circle" src="~/images/quotations-button.png" alt="">
+                                </div>
+                                <h5 class="mt-4 mb-0"><strong class="text-warning text-uppercase">DƯƠNG THÁI</strong></h5>
+                                <h6 class="text-dark m-0">CHỦ CỬA HÀNG</h6>
+                                <p class="m-0 pt-3">MÃ SỐ SINH VIÊN: 1811060692.</p>
+                            </div>
+                            <div class="carousel-item text-center">
+                                <div class="img-box p-1 border rounded-circle m-auto">
+                                    <img class="d-block w-100 rounded-circle" src="~/images/quotations-button.png" alt="">
+                                </div>
+                                <h5 class="mt-4 mb-0"><strong class="text-warning text-uppercase">NGUYỄN THANH BÌNH</strong></h5>
+                                <h6 class="text-dark m-0">NHÂN VIÊN</h6>
+                                <p class="m-0 pt-3">MÃ SỐ SINH VIÊN: 181106577.</p>
+                            </div>
+                            <div class="carousel-item text-center">
+                                <div class="img-box p-1 border rounded-circle m-auto">
+                                    <img class="d-block w-100 rounded-circle" src="~/images/quotations-button.png" alt="">
+                                </div>
+                                <h5 class="mt-4 mb-0"><strong class="text-warning text-uppercase">NGUYỄN VIỆT NIÊN</strong></h5>
+                                <h6 class="text-dark m-0">NHÂN VIÊN</h6>
+                                <p class="m-0 pt-3">MÃ SỐ SINH VIÊN: 1811062227.</p>
+                            </div>
+                            <div class="carousel-item text-center">
+                                <div class="img-box p-1 border rounded-circle m-auto">
+                                    <img class="d-block w-100 rounded-circle" src="~/images/quotations-button.png" alt="">
+                                </div>
+                                <h5 class="mt-4 mb-0"><strong class="text-warning text-uppercase">NGUYỄN HOÀNG ANH KHÔI</strong></h5>
+                                <h6 class="text-dark m-0">NHÂN VIÊN</h6>
+                                <p class="m-0 pt-3">.</p>
+                            </div>
+                        </div>
+                        <a class="carousel-control-prev" href="#reviews" role="button" data-slide="prev">
+                            <i class="fa fa-angle-left" aria-hidden="true"></i>
+                            <span class="sr-only">Previous</span>
+                        </a>
+                        <a class="carousel-control-next" href="#reviews" role="button" data-slide="next">
+                            <i class="fa fa-angle-right" aria-hidden="true"></i>
+                            <span class="sr-only">Next</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Customer Reviews -->
+    <!-- Start Contact info -->
+    <div class="contact-imfo-box">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 arrow-right">
+                    <i class="fa fa-volume-control-phone"></i>
+                    <div class="overflow-hidden">
+                        <h4>SỐ DIỆN THOẠI</h4>
+                        <p class="lead">
+                            99999999999999
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-4 arrow-right">
+                    <i class="fa fa-envelope"></i>
+                    <div class="overflow-hidden">
+                        <h4>Email</h4>
+                        <p class="lead">
+                            thaibinhnien@gmail.com
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <i class="fa fa-map-marker"></i>
+                    <div class="overflow-hidden">
+                        <h4>ĐỊA CHỈ</h4>
+                        <p class="lead">
+                            Quận 1 TP HỒ CHÍ MINH
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Contact info -->
+    <!-- Start Footer -->
+    <footer class="footer-area bg-f">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 col-md-6">
+                    <h3>CHÚNG TÔI</h3>
+                    <p>SỰ HÀI LÒNG CỦA QUÝ VỊ LÀ HẠNH PHÚC CHO CHÚNG TÔI.</p>
+                </div>
+
+                <div class="col-lg-3 col-md-6">
+                    <h3>THÔNG TIN LIÊN LẠC</h3>
+                    <p class="lead">SỐ 1 , QUẬN 1 TP HỒ CHÍ MINH</p>
+                    <p class="lead"><a href="#">9999999999</a></p>
+                    <p><a href="#"> thaiduong.080300@gmail.com</a></p>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h3>THỜI GIAN MỞ CỬA</h3>
+                    <p><span class="text-color">THỨ 2-THỨ 7: </span> 7h Sáng - 17h Chiều</p>
+
+                    <p><span class="text-color">CHỦ NHẬT :</span> Nghỉ</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="copyright">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <p class="company-name">
+                            All Rights Reserved. &copy; 2018 <a href="#">Live Dinner Restaurant</a> Design By :
+                            <a href="https://html.design/">html design</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </footer>
+    <!-- End Footer -->
+
+    <a href="#" id="back-to-top" title="Back to top" style="display: none;"><i class="fa fa-paper-plane-o" aria-hidden="true"></i></a>
+
+    <!-- ALL JS FILES -->
+    <script src="~/Scripts/jquery-3.2.1.min.js"></script>
+    <script src="~/Scripts/popper.min.js"></script>
+    <script src="~/Scripts/bootstrap.min.js"></script>
+    <!-- ALL PLUGINS -->
+    <script src="~/Scripts/jquery.superslides.min.js"></script>
+    <script src="~/Scripts/images-loded.min.js"></script>
+    <script src="~/Scripts/isotope.min.js"></script>
+    <script src="~/Scripts/baguetteBox.min.js"></script>
+    <script src="~/Scripts/form-validator.min.js"></script>
+    <script src="~/Scripts/contact-form-script.js"></script>
+    <script src="~/Scripts/custom.js"></script>
+</body>
+</html>
